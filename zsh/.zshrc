@@ -142,3 +142,21 @@ export GOBIN="$GOPATH/bin"
 
 export PATH="$PATH:$GOBIN"
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Added by Antigravity IDE
+export PATH="/Users/daverussell1309/.antigravity-ide/antigravity-ide/bin:$PATH"
+
+# Laravel Sail
+sail() {
+  if [ -f ./vendor/bin/sail ]; then
+    ./vendor/bin/sail "$@"
+  else
+    echo "Not a Laravel Sail project folder!"
+  fi
+}
+
+eval "$(pyenv init -)"
