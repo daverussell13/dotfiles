@@ -160,3 +160,16 @@ sail() {
 }
 
 eval "$(pyenv init -)"
+
+doit() {
+  cd ~/Developer/doitpay/"$1"
+}
+
+_doit_completions() {
+  local -a projects
+  projects=($(ls ~/Developer/doitpay))
+  
+  _describe 'command' projects
+}
+
+compdef _doit_completions doit

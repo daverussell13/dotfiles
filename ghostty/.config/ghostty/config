@@ -30,3 +30,6 @@ mouse-hide-while-typing = true
 
 # Quit Terminal
 quit-after-last-window-closed = false
+
+# Options as alt
+macos-option-as-alt = true
