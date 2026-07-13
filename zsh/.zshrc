@@ -130,6 +130,13 @@ alias dotfiles='cd ~/dotfiles'
 alias zshrc='nvim ~/dotfiles/zsh/.zshrc'
 alias zshload='source ~/.zshrc'
 
+# Tmux
+alias ta='tmux attach'
+alias tls='tmux list-sessions'
+alias tks='tmux kill-session -t'
+alias tkall='tmux kill-server'
+alias t='tmux attach || tmux'
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -159,8 +166,13 @@ sail() {
   fi
 }
 
+# Pyenv
 eval "$(pyenv init -)"
 
+# Binding
+bindkey '^[^?' backward-kill-word
+
+# Personal Script
 doit() {
   cd ~/Developer/doitpay/"$1"
 }
@@ -173,3 +185,5 @@ _doit_completions() {
 }
 
 compdef _doit_completions doit
+
+
