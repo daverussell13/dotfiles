@@ -173,17 +173,34 @@ eval "$(pyenv init -)"
 bindkey '^[^?' backward-kill-word
 
 # Personal Script
-doit() {
-  cd ~/Developer/doitpay/"$1"
+
+_goto_proj() {
+  local target="$1"
+  local base_dir="$2"
+  if [[ -d "$base_dir/$target" ]]; then
+    cd "$base_dir/$target"
+  else
+    echo "Error: Directory '$target' does not exist in $base_dir"
+  fi
 }
 
-_doit_completions() {
+doit() { _goto_proj "$1" "$HOME/Developer/doitpay"; }
+proj() { _goto_proj "$1" "$HOME/Developer/project"; }
+
+_doit_cmp() {
   local -a projects
-  projects=($(ls ~/Developer/doitpay))
-  
-  _describe 'command' projects
+  projects=($HOME/Developer/doitpay/*(/:t))
+  _describe 'project' projects
 }
 
-compdef _doit_completions doit
+_proj_cmp() {
+  local -a projects
+  projects=($HOME/Developer/project/*(/:t))
+  _describe 'project' projects
+}
 
+compdef _doit_cmp doit
+compdef _proj_cmp proj
 
+eval "$(zoxide init zsh)"
+eval "$(tv init zsh)"
