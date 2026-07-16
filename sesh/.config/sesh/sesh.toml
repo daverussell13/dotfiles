@@ -1,0 +1,17 @@
+#:schema https://github.com/joshmedeski/sesh/raw/main/sesh.schema.json
+blacklist = ["scratch"]
+cache = false
+dir_length = 2
+
+sort_order = ["config", "tmux", "zoxide"]
+
+[[session]]
+name = "tmuxconf"
+path = "~/dotfiles/tmux/.config/tmux"
+startup_command = "vi tmux.conf"
+preview_command = "bat --color=always ~/dotfiles/tmux/.config/tmux/tmux.conf"
+
+[[session]]
+name = "nvimconf"
+path = "~/dotfiles/nvim/.config/nvim/"
+startup_command = "ls"

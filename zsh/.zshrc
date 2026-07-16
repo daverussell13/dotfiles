@@ -135,7 +135,10 @@ alias ta='tmux attach'
 alias tls='tmux list-sessions'
 alias tks='tmux kill-session -t'
 alias tkall='tmux kill-server'
-alias t='tmux attach || tmux'
+alias t='tmux'
+
+# Television
+alias ts='tv sesh'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
