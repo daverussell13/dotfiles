@@ -5,22 +5,59 @@ dir_length = 2
 
 sort_order = ["config", "tmux", "zoxide"]
 
+# Windows
+
 [[window]]
 name = "shell"
+
+[[window]]
+name = "opencode"
+startup_script = "opencode"
+
+# Sessions
 
 [[session]]
 name = "tmuxconf"
 path = "~/dotfiles/tmux/.config/tmux"
-startup_command = "vi tmux.conf"
-preview_command = "bat --color=always ~/dotfiles/tmux/.config/tmux/tmux.conf"
+startup_command = "nvim ."
+preview_command = "eza --all --git --icons --color=always {}"
 
 [[session]]
 name = "nvimconf"
 path = "~/dotfiles/nvim/.config/nvim"
 startup_command = "nvim ."
+preview_command = "eza --all --git --icons --color=always {}"
 
 [[session]]
 name = "seshconf"
 path = "~/dotfiles/sesh/.config/sesh"
-startup_command = "nvim sesh.toml"
-preview_command = "bat --color=always ~/dotfiles/sesh/.config/sesh/sesh.toml"
+startup_command = "nvim ."
+preview_command = "eza --all --git --icons --color=always {}"
+
+[[session]]
+name = "doitpay-pg"
+path = "~/Developer/doitpay/doitpay-pg"
+startup_command = "nvim"
+preview_command = "eza --all --git --icons --color=always {}"
+windows = ["opencode", "shell"]
+
+[[session]]
+name = "doitpay-mobi"
+path = "~/Developer/doitpay/doitpay-mobi"
+startup_command = "nvim"
+preview_command = "eza --all --git --icons --color=always {}"
+windows = ["opencode", "shell"]
+
+[[session]]
+name = "qa-automation"
+path = "~/Developer/doitpay/qa-automation"
+startup_command = "nvim"
+preview_command = "eza --all --git --icons --color=always {}"
+windows = ["opencode", "shell"]
+
+[[session]]
+name = "okeke-internal"
+path = "~/Developer/project/okeke-internal-system/"
+startup_command = "nvim"
+preview_command = "eza --all --git --icons --color=always {}"
+windows = ["opencode", "shell"]
