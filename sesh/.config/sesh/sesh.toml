@@ -3,7 +3,7 @@ blacklist = ["scratch"]
 cache = false
 dir_length = 2
 
-sort_order = ["config", "tmux", "zoxide"]
+sort_order = ["tmux", "config", "zoxide"]
 
 # Windows
 
@@ -15,24 +15,6 @@ name = "opencode"
 startup_script = "opencode"
 
 # Sessions
-
-[[session]]
-name = "tmuxconf"
-path = "~/dotfiles/tmux/.config/tmux"
-startup_command = "nvim ."
-preview_command = "eza --all --git --icons --color=always {}"
-
-[[session]]
-name = "nvimconf"
-path = "~/dotfiles/nvim/.config/nvim"
-startup_command = "nvim ."
-preview_command = "eza --all --git --icons --color=always {}"
-
-[[session]]
-name = "seshconf"
-path = "~/dotfiles/sesh/.config/sesh"
-startup_command = "nvim ."
-preview_command = "eza --all --git --icons --color=always {}"
 
 [[session]]
 name = "doitpay-pg"
@@ -61,3 +43,33 @@ path = "~/Developer/project/okeke-internal-system/"
 startup_command = "nvim"
 preview_command = "eza --all --git --icons --color=always {}"
 windows = ["opencode", "shell"]
+
+[[session]]
+name = "tmuxconf"
+path = "~/dotfiles/tmux/.config/tmux"
+startup_command = "nvim ."
+preview_command = "eza --all --git --icons --color=always {}"
+
+[[session]]
+name = "nvimconf"
+path = "~/dotfiles/nvim/.config/nvim"
+startup_command = "nvim ."
+preview_command = "eza --all --git --icons --color=always {}"
+
+[[session]]
+name = "seshconf"
+path = "~/dotfiles/sesh/.config/sesh"
+startup_command = "nvim ."
+preview_command = "eza --all --git --icons --color=always {}"
+
+[[session]]
+name = "occonf"
+path = "~/.config/opencode/"
+startup_command = "nvim"
+preview_command = "eza --all --git --icons --color=always {}"
+
+[[session]]
+name = "zshconf"
+path = "~"
+startup_command = "nvim ~/.zshrc"
+preview_command = "bat --color=always ~/.zshrc"
