@@ -57,6 +57,21 @@ return {
     },
   },
   {
+    "theHamsta/nvim-dap-virtual-text",
+    opts = {
+      enabled = false,
+    },
+    keys = {
+      {
+        "<leader>dv",
+        function()
+          require("nvim-dap-virtual-text").toggle()
+        end,
+        desc = "Toggle Debug Virtual Text",
+      },
+    },
+  },
+  {
     "folke/snacks.nvim",
     opts = {
       scroll = {
@@ -140,6 +155,14 @@ return {
 ]],
         },
       },
+      terminal = {
+        win = {
+          backdrop = false,
+          wo = {
+            winblend = 0,
+          },
+        },
+      },
     },
   },
   {
@@ -149,6 +172,13 @@ return {
         "<leader>ds",
         toggle_sessions_sidebar,
         desc = "Sessions",
+      },
+      {
+        "<leader>dC",
+        function()
+          require("dap").clear_breakpoints()
+        end,
+        desc = "Clear All Breakpoints",
       },
     },
   },
