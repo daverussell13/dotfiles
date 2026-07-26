@@ -75,7 +75,7 @@ return {
     "folke/snacks.nvim",
     opts = {
       scroll = {
-        enabled = false,
+        enabled = true,
       },
       picker = {
         win = {
@@ -160,7 +160,19 @@ return {
           backdrop = false,
           wo = {
             winblend = 0,
+            winhighlight = "Normal:Normal,NormalFloat:Normal,FloatBorder:Normal",
           },
+        },
+      },
+      image = {
+        enabled = true,
+        doc = {
+          enabled = true,
+          inline = true,
+          float = true,
+          conceal = function(_, type)
+            return type == "math"
+          end,
         },
       },
     },
@@ -180,6 +192,42 @@ return {
         end,
         desc = "Clear All Breakpoints",
       },
+    },
+  },
+  {
+    "folke/noice.nvim",
+    opts_extend = { "routes" },
+    opts = {
+      routes = {
+        {
+          filter = {
+            event = "lsp",
+            any = {
+              kind = "progress",
+              { find = "pyright" },
+              { find = "basedpyright" },
+            },
+          },
+          opts = { skip = true },
+        },
+      },
+    },
+  },
+  {
+    "mfussenegger/nvim-lint",
+    opts = {
+      linters = {
+        ["markdownlint-cli2"] = {
+          args = { "--config", vim.fn.expand("~/.markdownlint-cli2.jsonc"), "--" },
+        },
+        markdownlint = {},
+      },
+    },
+  },
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    opts = {
+      latex = { enabled = false },
     },
   },
 }

@@ -45,6 +45,12 @@ preview_command = "eza --all --git --icons --color=always {}"
 windows = ["opencode", "shell"]
 
 [[session]]
+name = "ai-ml-vault"
+path = "~/Documents/AI-ML-Vault/"
+startup_command = "nvim"
+preview_command = "eza --all --git --icons --color=always {}"
+
+[[session]]
 name = "tmuxconf"
 path = "~/dotfiles/tmux/.config/tmux"
 startup_command = "nvim ."
