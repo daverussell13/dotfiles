@@ -1,0 +1,3 @@
+os:
+  edit: 'nvim --server "$NVIM" --remote "{{filename}}"'
+  editAtLine: 'nvim --server "$NVIM" --remote +{{line}} "{{filename}}"'
