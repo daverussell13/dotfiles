@@ -79,3 +79,8 @@ name = "zshconf"
 path = "~"
 startup_command = "nvim ~/.zshrc"
 preview_command = "bat --color=always ~/.zshrc"
+
+[[session]]
+name = "nyx-sgd-01"
+path = "~"
+startup_command = "ssh nyx-sgd-01"

@@ -230,6 +230,51 @@ return {
       latex = { enabled = false },
     },
   },
+  {
+    "nvim-mini/mini.map",
+    version = false,
+    config = function()
+      local map = require("mini.map")
+      map.setup({
+        integrations = {
+          map.gen_integration.builtin_search(),
+          map.gen_integration.diagnostic(),
+          map.gen_integration.gitsigns(),
+        },
+        symbols = {
+          encode = map.gen_encode_symbols.dot("4x2"),
+        },
+        window = {
+          show_integration_count = false,
+          winblend = 0,
+        },
+      })
+    end,
+    keys = {
+      {
+        "<leader>mm",
+        function()
+          require("mini.map").toggle()
+        end,
+        desc = "Toggle Minimap",
+      },
+      {
+        "<leader>mf",
+        function()
+          require("mini.map").toggle_focus()
+        end,
+        desc = "Focus Minimap",
+      },
+    },
+  },
+  {
+    "akinsho/git-conflict.nvim",
+    version = "*",
+    event = "VeryLazy",
+    opts = {
+      default_mappings = true, -- co/ct/cb/c0 etc, see below
+    },
+  },
 }
 
 -- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
