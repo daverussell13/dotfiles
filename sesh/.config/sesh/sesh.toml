@@ -51,6 +51,12 @@ startup_command = "nvim"
 preview_command = "eza --all --git --icons --color=always {}"
 
 [[session]]
+name = "devops-vault"
+path = "~/Documents/DevOPS/"
+startup_command = "nvim"
+preview_command = "eza --all --git --icons --color=always {}"
+
+[[session]]
 name = "tmuxconf"
 path = "~/dotfiles/tmux/.config/tmux"
 startup_command = "nvim ."
