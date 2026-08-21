@@ -45,6 +45,13 @@ preview_command = "eza --all --git --icons --color=always {}"
 windows = ["opencode", "shell"]
 
 [[session]]
+name = "kiro-shift-management"
+path = "~/Developer/project/kiro-shift-management/"
+startup_command = "nvim"
+preview_command = "eza --all --git --icons --color=always {}"
+windows = ["opencode", "shell"]
+
+[[session]]
 name = "ai-ml-vault"
 path = "~/Documents/AI-ML-Vault/"
 startup_command = "nvim"
@@ -87,6 +94,6 @@ startup_command = "nvim ~/.zshrc"
 preview_command = "bat --color=always ~/.zshrc"
 
 [[session]]
-name = "nyx-sgd-01"
+name = "nyxsgd1"
 path = "~"
-startup_command = "ssh nyx-sgd-01"
+startup_command = "ssh nyxsgd1"
