@@ -11,8 +11,8 @@ sort_order = ["tmux", "config", "zoxide"]
 name = "shell"
 
 [[window]]
-name = "opencode"
-startup_script = "opencode"
+name = "pi"
+startup_script = "pi"
 
 # Sessions
 
@@ -21,35 +21,47 @@ name = "doitpay-pg"
 path = "~/Developer/doitpay/doitpay-pg"
 startup_command = "nvim"
 preview_command = "eza --all --git --icons --color=always {}"
-windows = ["opencode", "shell"]
+windows = ["pi", "shell"]
 
 [[session]]
 name = "doitpay-mobi"
 path = "~/Developer/doitpay/doitpay-mobi"
 startup_command = "nvim"
 preview_command = "eza --all --git --icons --color=always {}"
-windows = ["opencode", "shell"]
+windows = ["pi", "shell"]
 
 [[session]]
 name = "qa-automation"
 path = "~/Developer/doitpay/qa-automation"
 startup_command = "nvim"
 preview_command = "eza --all --git --icons --color=always {}"
-windows = ["opencode", "shell"]
+windows = ["pi", "shell"]
 
 [[session]]
 name = "okeke-internal"
 path = "~/Developer/project/okeke-internal-system/"
 startup_command = "nvim"
 preview_command = "eza --all --git --icons --color=always {}"
-windows = ["opencode", "shell"]
+windows = ["pi", "shell"]
 
 [[session]]
 name = "kiro-shift-management"
 path = "~/Developer/project/kiro-shift-management/"
 startup_command = "nvim"
 preview_command = "eza --all --git --icons --color=always {}"
-windows = ["opencode", "shell"]
+windows = ["pi", "shell"]
+
+[[session]]
+name = "doitpay-mobi-bo"
+path = "~/Developer/doitpay/back-office-mobile-admin/"
+startup_command = "nvim"
+preview_command = "eza --all --git --icons --color=always {}"
+windows = ["pi", "shell"]
+
+[[session]]
+name = "learn"
+path = "~/Developer/learning/"
+preview_command = "eza --all --git --icons --color=always {}"
 
 [[session]]
 name = "ai-ml-vault"

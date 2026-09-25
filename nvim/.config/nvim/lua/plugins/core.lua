@@ -42,6 +42,13 @@ return {
         enabled = false,
       },
       servers = {
+        gopls = {
+          settings = {
+            gopls = {
+              buildFlags = {"-tags=integration,wireinject"}
+            }
+          }
+        },
         taplo = {
           settings = {
             taplo = {
@@ -75,7 +82,7 @@ return {
     "folke/snacks.nvim",
     opts = {
       scroll = {
-        enabled = true,
+        enabled = false,
       },
       picker = {
         win = {
@@ -193,6 +200,21 @@ return {
         desc = "Clear All Breakpoints",
       },
     },
+  },
+  {
+    "rcarriga/nvim-dap-ui",
+    config = function(_, opts)
+      local dap = require("dap")
+      local dapui = require("dapui")
+      dapui.setup(opts)
+      -- Auto-close the UI when the session ends, but do NOT auto-open it on start
+      dap.listeners.before.event_terminated["dapui_config"] = function()
+        dapui.close({})
+      end
+      dap.listeners.before.event_exited["dapui_config"] = function()
+        dapui.close({})
+      end
+    end,
   },
   {
     "folke/noice.nvim",
