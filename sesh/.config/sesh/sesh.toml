@@ -106,6 +106,8 @@ startup_command = "nvim ~/.zshrc"
 preview_command = "bat --color=always ~/.zshrc"
 
 [[session]]
-name = "nyxsgd1"
-path = "~"
-startup_command = "ssh nyxsgd1"
+name = "piconf"
+path = "~/.pi/"
+startup_command = "nvim ."
+preview_command = "eza --all --git --icons --color=always {}"
+windows = ["pi", "shell"]
