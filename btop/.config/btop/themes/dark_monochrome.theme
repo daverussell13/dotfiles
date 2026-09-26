@@ -1,0 +1,62 @@
+# Dark Monochrome — derived from ~/.config/color-palette/dark-monochrome.json
+# Grayscale UI with restrained semantic colors for metrics and state.
+
+# Main background and text
+theme[main_bg]="#080808"
+theme[main_fg]="#C0C0C0"
+theme[title]="#E0E0E0"
+theme[hi_fg]="#FFFFFF"
+
+# Selection and inactive content
+theme[selected_bg]="#222222"
+theme[selected_fg]="#FFFFFF"
+theme[inactive_fg]="#848484"
+
+# Graph labels, meter tracks, and process details
+theme[graph_text]="#D0D0D0"
+theme[meter_bg]="#1A1A1A"
+theme[proc_misc]="#A6A6A6"
+
+# Box outlines
+theme[cpu_box]="#C0C0C0"
+theme[mem_box]="#8FAF8F"
+theme[net_box]="#8FA3AF"
+theme[proc_box]="#A680A6"
+theme[div_line]="#303030"
+
+# Temperature graph (success -> warning -> danger)
+theme[temp_start]="#8FAF8F"
+theme[temp_mid]="#A9A477"
+theme[temp_end]="#AF8F8F"
+
+# CPU graph (cyan -> blue -> emphasis)
+theme[cpu_start]="#80A6A6"
+theme[cpu_mid]="#8FA3AF"
+theme[cpu_end]="#D0D0D0"
+
+# Memory and disk meters
+theme[free_start]="#8FAF8F"
+theme[free_mid]="#80A6A6"
+theme[free_end]="#8FA3AF"
+theme[cached_start]="#8FA3AF"
+theme[cached_mid]="#80A6A6"
+theme[cached_end]="#A680A6"
+theme[available_start]="#C0C0C0"
+theme[available_mid]="#A9A477"
+theme[available_end]="#AF8F8F"
+theme[used_start]="#8FAF8F"
+theme[used_mid]="#80A6A6"
+theme[used_end]="#8FA3AF"
+
+# Network graphs
+theme[download_start]="#8FA3AF"
+theme[download_mid]="#80A6A6"
+theme[download_end]="#C0C0C0"
+theme[upload_start]="#8FAF8F"
+theme[upload_mid]="#80A6A6"
+theme[upload_end]="#A680A6"
+
+# Process usage gradient
+theme[process_start]="#8FA3AF"
+theme[process_mid]="#A680A6"
+theme[process_end]="#D0D0D0"
