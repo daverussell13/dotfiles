@@ -5,7 +5,7 @@ font-style = "Medium"
 font-thicken = true
 
 # Transparency
-background-opacity = 0.7
+background-opacity = 0.8
 background-blur-radius = 9
 
 # Cursor
