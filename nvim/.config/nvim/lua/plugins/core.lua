@@ -28,7 +28,9 @@ return {
     "daverussell13/darkmonochrome.nvim",
     lazy = false,
     priority = 1000,
-    opts = {},
+    opts = {
+      transparent = true,
+    },
   },
   {
     "LazyVim/LazyVim",
