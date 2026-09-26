@@ -25,14 +25,15 @@ end
 
 return {
   {
+    "daverussell13/darkmonochrome.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
+  {
     "LazyVim/LazyVim",
-    init = function()
-      require("catppuccin").setup({
-        transparent_background = true,
-      })
-    end,
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "darkmonochrome",
     },
   },
   {
