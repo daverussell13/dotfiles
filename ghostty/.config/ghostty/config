@@ -6,7 +6,7 @@ font-thicken = true
 
 # Transparency
 background-opacity = 0.7
-background-blur-radius = 25
+background-blur-radius = 7
 
 # Cursor
 cursor-style = "bar"
@@ -17,7 +17,7 @@ window-padding-x = 0
 window-padding-y = 0
 
 # Window & Theme
-theme = "Catppuccin Mocha"
+theme = "Dark Monochrome"
 window-decoration = true
 
 # Quick Terminal

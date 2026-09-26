@@ -1,13 +1,12 @@
 {
   "meta": {
     "name": "Dark Monochrome",
-    "version": "1.0.0",
-    "description": "A grayscale-only color system based on the Dark Monochrome palette. Uses brightness and contrast instead of hue for visual hierarchy and semantic states."
+    "version": "1.3.0",
+    "description": "A dark monochrome color system with a grayscale foundation and restrained desaturated semantic colors. Uses grayscale for the core interface while allowing subtle color for semantic states and terminal output."
   },
-
   "palette": {
     "primary": {
-      "50":  "#F5F5F5",
+      "50": "#F5F5F5",
       "100": "#E0E0E0",
       "200": "#D0D0D0",
       "300": "#C4C4C4",
@@ -18,9 +17,8 @@
       "800": "#5C5C5C",
       "900": "#4A4A4A"
     },
-
     "secondary": {
-      "50":  "#FFFFFF",
+      "50": "#FFFFFF",
       "100": "#E0E0E0",
       "200": "#D0D0D0",
       "300": "#C0C0C0",
@@ -31,9 +29,8 @@
       "800": "#7A7A7A",
       "900": "#686868"
     },
-
     "neutral": {
-      "50":  "#FFFFFF",
+      "50": "#FFFFFF",
       "100": "#E0E0E0",
       "200": "#C4C4C4",
       "300": "#A6A6A6",
@@ -44,48 +41,70 @@
       "800": "#222222",
       "900": "#080808"
     },
-
     "success": {
-      "50":  "#E0E0E0",
-      "100": "#D0D0D0",
-      "500": "#C0C0C0",
-      "600": "#A6A6A6",
-      "700": "#848484"
+      "50": "#F0F5F0",
+      "100": "#DCE8DC",
+      "200": "#C0D2C0",
+      "300": "#A4BDA4",
+      "400": "#8FAF8F",
+      "500": "#7A9E7A",
+      "600": "#668866",
+      "700": "#557355",
+      "800": "#435D43",
+      "900": "#344934"
     },
-
     "warning": {
-      "50":  "#E0E0E0",
-      "100": "#D0D0D0",
-      "500": "#B8B8B8",
-      "600": "#A6A6A6",
-      "700": "#848484"
+      "50": "#F5F4EE",
+      "100": "#E8E5D5",
+      "200": "#D3CFB3",
+      "300": "#BDB88F",
+      "400": "#A9A477",
+      "500": "#96905F",
+      "600": "#817B50",
+      "700": "#6D6844",
+      "800": "#575336",
+      "900": "#44412B"
     },
-
     "danger": {
-      "50":  "#E0E0E0",
-      "100": "#D0D0D0",
-      "500": "#E0E0E0",
-      "600": "#D0D0D0",
-      "700": "#C0C0C0"
+      "50": "#F5F0F0",
+      "100": "#E8DCDC",
+      "200": "#D2C0C0",
+      "300": "#BDA4A4",
+      "400": "#AF8F8F",
+      "500": "#9E7A7A",
+      "600": "#886666",
+      "700": "#735555",
+      "800": "#5D4343",
+      "900": "#493434"
     },
-
     "info": {
-      "50":  "#E0E0E0",
-      "100": "#D0D0D0",
-      "500": "#B8B8B8",
-      "600": "#A6A6A6",
-      "700": "#848484"
+      "50": "#F0F3F5",
+      "100": "#DCE3E8",
+      "200": "#C0CBD2",
+      "300": "#A4B4BD",
+      "400": "#8FA3AF",
+      "500": "#7A929E",
+      "600": "#667D88",
+      "700": "#556873",
+      "800": "#43535D",
+      "900": "#344149"
     }
   },
-
   "semantic": {
     "light": {
       "background": "{neutral.50}",
-      "surface": "#ffffff",
+      "surface": "#FFFFFF",
+      "surface-hover": "{neutral.100}",
+      "surface-active": "{neutral.200}",
       "border": "{neutral.200}",
+      "border-strong": "{neutral.300}",
       "text-primary": "{neutral.900}",
       "text-secondary": "{neutral.600}",
+      "text-muted": "{neutral.500}",
       "text-disabled": "{neutral.400}",
+      "text-emphasis": "{neutral.800}",
+      "text-bright": "{neutral.900}",
+      "text-maximum": "#000000",
       "action-primary": "{primary.600}",
       "action-primary-hover": "{primary.700}",
       "action-secondary": "{secondary.600}",
@@ -98,7 +117,6 @@
       "info": "{info.600}",
       "info-bg": "{info.50}"
     },
-
     "dark": {
       "background": "#080808",
       "surface": "#121212",
@@ -106,82 +124,72 @@
       "surface-active": "#222222",
       "border": "#1A1A1A",
       "border-strong": "#303030",
-
       "text-primary": "#C0C0C0",
       "text-secondary": "#A6A6A6",
       "text-muted": "#848484",
       "text-disabled": "#666666",
       "text-emphasis": "#D0D0D0",
       "text-bright": "#E0E0E0",
-
+      "text-maximum": "#FFFFFF",
       "action-primary": "#C0C0C0",
       "action-primary-hover": "#D0D0D0",
       "action-secondary": "#A6A6A6",
-
-      "success": "#C0C0C0",
-      "success-bg": "#1A1A1A",
-
-      "warning": "#D0D0D0",
-      "warning-bg": "#222222",
-
-      "danger": "#E0E0E0",
-      "danger-bg": "#1A1A1A",
-
-      "info": "#B8B8B8",
-      "info-bg": "#121212"
+      "success": "{success.400}",
+      "success-bg": "#182018",
+      "warning": "{warning.400}",
+      "warning-bg": "#211F16",
+      "danger": "{danger.400}",
+      "danger-bg": "#211919",
+      "info": "{info.400}",
+      "info-bg": "#181D20"
     }
   },
-
   "terminal": {
     "black": "#000000",
-    "red": "#4A4A4A",
-    "green": "#5C5C5C",
-    "yellow": "#666666",
-    "blue": "#707070",
-    "magenta": "#7A7A7A",
-    "cyan": "#848484",
+    "red": "#B07070",
+    "green": "#80A680",
+    "yellow": "#B0A670",
+    "blue": "#8096B0",
+    "magenta": "#A680A6",
+    "cyan": "#80A6A6",
     "white": "#A6A6A6",
-
     "bright_black": "#3D3D3D",
-    "bright_red": "#686868",
-    "bright_green": "#A6A6A6",
-    "bright_yellow": "#B0B0B0",
-    "bright_blue": "#B8B8B8",
-    "bright_magenta": "#D0D0D0",
-    "bright_cyan": "#C0C0C0",
-    "bright_white": "#E0E0E0"
+    "bright_red": "#B07070",
+    "bright_green": "#80A680",
+    "bright_yellow": "#B0A670",
+    "bright_blue": "#8096B0",
+    "bright_magenta": "#A680A6",
+    "bright_cyan": "#80A6A6",
+    "bright_white": "#FFFFFF"
   },
-
   "ui": {
     "background": "#080808",
     "surface": "#121212",
     "surface-hover": "#1A1A1A",
     "surface-active": "#222222",
-
     "border": "#1A1A1A",
     "border-strong": "#303030",
-
     "text-primary": "#C0C0C0",
     "text-secondary": "#A6A6A6",
     "text-muted": "#848484",
     "text-disabled": "#666666",
     "text-emphasis": "#D0D0D0",
     "text-bright": "#E0E0E0",
-
+    "text-maximum": "#FFFFFF",
     "selection-background": "#1A1A1A",
     "selection-foreground": "#C4C4C4",
-
     "cursor-background": "#C4C4C4",
     "cursor-foreground": "#080808"
   },
-
   "usage_notes": {
     "scale_meaning": "50 = lightest shade, 500 = base reference, 900 = darkest shade.",
-    "color_mode": "Grayscale only. All semantic colors intentionally use grayscale values.",
-    "semantic_states": "Success, warning, danger, and info are differentiated primarily through brightness, contrast, icons, labels, and typography rather than hue.",
-    "design_style": "Dark, minimalist, monochromatic, technical, restrained, and low visual noise.",
+    "color_mode": "The core interface is grayscale-first. Semantic colors use restrained, desaturated hues only where color improves usability.",
+    "semantic_states": "Success, warning, danger, and info use subtle hue combined with brightness and contrast. Color should not be the only indicator of state.",
+    "design_style": "Dark, minimalist, monochromatic, technical, restrained, muted, and low visual noise.",
     "dark_mode": "Dark mode is the primary intended appearance. Use #080808 as the main background and #C0C0C0 as the default primary text.",
-    "accessibility": "Verify text/background pairs meet WCAG 2.1 AA requirements for the target application.",
-    "customization": "Do not introduce colored hues. If an application requires additional tokens, derive them from the existing grayscale palette instead of creating new colors."
+    "maximum_emphasis": "#FFFFFF is reserved for maximum visual emphasis, such as highly important headings, active states, selected content, critical values, and bright terminal output.",
+    "accessibility": "Verify text/background pairs meet WCAG 2.1 AA requirements. Semantic colors should not be the only indicator of state.",
+    "terminal_colors": "ANSI terminal colors use readable, desaturated hues rather than dark grayscale values. Standard semantic colors prioritize readability, while bright white uses #FFFFFF for maximum contrast.",
+    "customization": "Keep the grayscale foundation intact. Additional colors should remain low-saturation, muted, and visually compatible with the existing palette."
   }
 }
