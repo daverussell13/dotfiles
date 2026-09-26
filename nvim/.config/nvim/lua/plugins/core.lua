@@ -32,9 +32,9 @@ return {
       transparent = true,
       on_highlights = function(highlights, colors)
         highlights.SnacksDashboardFooter = { fg = colors.fg_bright }
-        highlights.SnacksDashboardSpecial = { fg = colors.fg_emphasis }
+        highlights.SnacksDashboardSpecial = { fg = colors.fg_muted }
       end,
-  },
+    },
   },
   {
     "LazyVim/LazyVim",
@@ -52,9 +52,9 @@ return {
         gopls = {
           settings = {
             gopls = {
-              buildFlags = {"-tags=integration,wireinject"}
-            }
-          }
+              buildFlags = { "-tags=integration,wireinject" },
+            },
+          },
         },
         taplo = {
           settings = {
