@@ -2,7 +2,7 @@
 # Source: color-palette/.config/color-palette/dark-monochrome.json
 
 background = #080808
-foreground = #C0C0C0
+foreground = #FFFFFF
 cursor-color = #C4C4C4
 cursor-text = #080808
 selection-background = #1A1A1A
