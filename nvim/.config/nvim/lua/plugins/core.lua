@@ -30,7 +30,11 @@ return {
     priority = 1000,
     opts = {
       transparent = true,
-    },
+      on_highlights = function(highlights, colors)
+        highlights.SnacksDashboardFooter = { fg = colors.fg_bright }
+        highlights.SnacksDashboardSpecial = { fg = colors.fg_emphasis }
+      end,
+  },
   },
   {
     "LazyVim/LazyVim",
