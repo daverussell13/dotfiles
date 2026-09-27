@@ -111,3 +111,9 @@ path = "~/.pi/"
 startup_command = "nvim ."
 preview_command = "eza --all --git --icons --color=always {}"
 windows = ["pi", "shell"]
+
+[[session]]
+name = "spotify"
+path = "~"
+startup_command = "spotatui"
+preview_command = "eza --all --git --icons --color=always {}"
